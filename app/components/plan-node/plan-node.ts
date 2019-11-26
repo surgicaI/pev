@@ -10,6 +10,8 @@ import {ColorService} from '../../services/color-service';
 
 /// <reference path="lodash.d.ts" />
 
+declare let _: any;
+
 @Component({
     selector: 'plan-node',
     inputs: ['plan', 'node', 'viewOptions'],

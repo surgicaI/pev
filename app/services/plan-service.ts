@@ -3,6 +3,9 @@ import {EstimateDirection} from '../enums';
 /// <reference path="moment.d.ts" />
 /// <reference path="lodash.d.ts" />
 
+declare let moment: any;
+declare let _: any;
+
 export class PlanService {
     // plan property keys
     NODE_TYPE_PROP: string = 'Node Type';
@@ -67,7 +70,7 @@ export class PlanService {
     }
 
     createPlan(planName: string, planContent: string, planQuery): IPlan {
-        var plan: IPlan = {
+        var plan: any = {
             id: this.PEV_PLAN_TAG + new Date().getTime().toString(),
             name: planName || 'plan created on ' + moment().format('LLL'),
             createdOn: new Date(),

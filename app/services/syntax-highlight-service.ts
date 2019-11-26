@@ -1,5 +1,7 @@
-/// <reference path="highlight.d.ts" />
-/// <reference path="lodash.d.ts" />
+
+
+declare let hljs: any;
+declare let _: any;
 
 export class SyntaxHighlightService {
     OPEN_TAG: string = ' _OPEN_TAG_';
